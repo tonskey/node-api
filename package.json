@@ -1,0 +1,54 @@
+{
+    "name": "node-api",
+    "version": "1.0.0",
+    "author": "Anton Kharkhonov",
+    "description": "RESTful API with Node.js and passport",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "bin": {
+        "www": "./bin/www"
+    },
+    "scripts": {
+        "start": "node bin/www",
+        "dev": "nodemon bin/www",
+        "test:unit": "jest test/unit",
+        "test:unit:watch": "jest test/unit --watch",
+        "test:integration": "jest test/integration",
+        "test:integration:watch": "jest test/integration --watch",
+        "test": "npm run test:unit && npm run test:integration",
+        "generate": "node ./generateData.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.x",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.x",
+        "faker": "^4.1.x",
+        "mongoose": "^5.0.x",
+        "nconf": "^0.10.x",
+        "oauth2orize": "^1.11.x",
+        "passport": "^0.4.x",
+        "passport-http": "^0.3.x",
+        "passport-http-bearer": "^1.0.x",
+        "passport-oauth2-client-password": "^0.1.x",
+        "upath": "^1.1.0",
+        "winston": "^2.4.x"
+    },
+    "devDependencies": {
+        "cz-conventional-changelog": "^2.1.0",
+        "eslint": "^5.12.1",
+        "eslint-config-prettier": "^3.6.0",
+        "eslint-plugin-jest": "^22.1.3",
+        "eslint-plugin-node": "^8.0.1",
+        "jest": "^23.6.0",
+        "nodemon": "^1.18.9",
+        "prettier": "1.16.1",
+        "superagent": "^3.8.x",
+        "tape": "^4.9.x"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
