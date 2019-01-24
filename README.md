@@ -82,5 +82,5 @@ docker-compose up -d --build
 ### Create demo data
 
 ```sh
-docker exec nodeapi_node_api_1 node generateData.js
+docker-compose exec app node generateData.js
 ```
